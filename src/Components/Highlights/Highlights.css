@@ -1,0 +1,19 @@
+.read-more {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #E6F2F2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.border-top-radius {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

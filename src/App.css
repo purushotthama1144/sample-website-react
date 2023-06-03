@@ -1,38 +1,292 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'IBM Plex Mono', sans-serif;
+    src: url('../public/fonts/ibmplexmono-regular-webfont.woff') format('woff'),
+        url('../public/fonts/ibmplexmono-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*** Base CSS Start ***/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+fieldset,
+img {
+    border: 0;
 }
 
-.App-link {
-  color: #61dafb;
+*:focus {
+    outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-style: normal;
+    color: #000;
+    font-size: 16px;
+    font-variant: normal;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    -webkit-text-size-adjust: none;
+    scroll-behavior: smooth;
+}
+
+b,
+strong {
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 1.5;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-style: normal;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #008080;
+
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul,
+ol,
+dl {
+    margin-left: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+p,
+fieldset {
+    margin-bottom: 10px;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
+}
+
+.fl-bx {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.v-top {
+    vertical-align: top;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-33 {
+    width: 33.33%;
+    padding: 0 10px;
+}
+
+.w-30 {
+    width: 30%;
+    padding: 0 10px;
+}
+
+.w-70 {
+    width: 70%;
+    padding: 0 10px;
+}
+
+.w-50 {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.w-25 {
+    width: 25%;
+    padding: 0 10px;
+}
+
+.w-75 {
+    width: 75%;
+    padding: 0 10px;
+}
+
+.n-margin {
+    margin: 0 -10px;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1260px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 96%;
+}
+
+.container-large {
+    max-width: 1460px;
+}
+
+.container-medium-width {
+    max-width: 1170px;
+}
+
+.container-small-width {
+    max-width: 1068px;
+}
+
+.mt-35 {
+    margin-top: 35px;
+}
+
+.active-nav {
+    border-bottom: 2px solid #286ab4;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.block_title {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.bg-box {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ECECEC;
+    -webkit-box-shadow: 0px 4px 4px 0px rgb(204, 204, 204);
+    -moz-box-shadow: 0px 4px 4px 0px rgb(204, 204, 204);
+    box-shadow: 0px 4px 4px 0px rgb(204, 204, 204);
+}
+
+.text-block {
+    padding: 20px;
+    position: relative;
+    min-height: 190px;
+}
+
+.button {
+    background-color: #008080;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-white {
+    border: 1px solid #008080;
+    color: #008080;
+    background-color: #ffffff;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.bg-grey {
+    background-color: #E6F2F2;
+}
+
+@media(max-width: 468px) {
+    .w-33 {
+        width: 100%;
+    }
+
+    .w-50 {
+        width: 100%;
+    }
 }
