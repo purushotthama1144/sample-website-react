@@ -4,9 +4,7 @@ import { useParams } from 'react-router-dom'
 import './HighlightsActivityDetails.css'
 
 function HighlightsActivityDetails() {
-
     const { name } = useParams();
-
     const [categoryData, setcategoryData] = useState(null);
 
     useEffect(() => {
@@ -42,10 +40,8 @@ function HighlightsActivityDetails() {
                         </ul>
                     </div>
                 </div>
-
-
             ) : (
-                <div>Loading...</div>
+                <div>Please wait...</div>
             )}
         </div>
     )

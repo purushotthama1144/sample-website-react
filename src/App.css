@@ -305,74 +305,98 @@ fieldset {
 }
 
 /* Menu CSS */
-/* Hamburger Menu without Javascript*/
-.menuIconToggle {
-    box-sizing: border-box;
-    cursor: pointer;
-    position: fixed;
-    z-index: 4;
-    display: none;
-    top: 30px;
-    right: 20px;
-    height: 35px;
-    width: 35px;
-    transition: all 0.3s;
+.icon-bars {
+    height: 25px;
+    width: 40px;
+    position: relative;
 }
 
-.hamb-line {
-    box-sizing: border-box;
+.nav-bar span {
+    display: block;
     position: absolute;
-    height: 4px;
-    width: 100%;
-    background-color: #444;
-    transition: all 0.25s;
+    height: 2px;
+    width: 50%;
+    background: #000;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
 }
 
-.hor {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    position: relative;
-    float: left;
-    margin-top: 4px;
+.nav-bar span:nth-child(1),
+.nav-bar span:nth-child(2) {
+    top: 0px;
 }
 
-.dia.p-1 {
-    position: relative;
-    box-sizing: border-box;
-    float: left;
-    transition: all .25s;
+.nav-bar span:nth-child(2n+1),
+.active .nav-bar span:nth-child(1),
+.active .nav-bar span:nth-child(5) {
+    left: 0px;
 }
 
-.dia.p-2 {
-    box-sizing: border-box;
-    position: relative;
-    float: left;
-    margin-top: 4px;
-    transition: all .25s;
+.nav-bar span:nth-child(3),
+.nav-bar span:nth-child(4) {
+    top: 10px;
 }
 
-.active input[type=checkbox]:checked~.menuIconToggle>.hor {
-    box-sizing: border-box;
+.nav-bar span:nth-child(5),
+.nav-bar span:nth-child(6) {
+    top: 20px;
+}
+
+.nav-bar span:nth-child(2n) {
+    left: 50%;
+}
+
+.active .nav-bar span:nth-child(1),
+.active .nav-bar span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.active .nav-bar span:nth-child(2),
+.active .nav-bar span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.nav-bar span:nth-child(2n+1),
+.active .nav-bar span:nth-child(1),
+.active .nav-bar span:nth-child(5) {
+    left: 0px;
+}
+
+.active .nav-bar span:nth-child(2),
+.active .nav-bar span:nth-child(6) {
+    left: -webkit-calc(50% - 6px);
+    left: -moz-calc(50% - 6px);
+    left: calc(50% - 6px);
+}
+
+.active .nav-bar span:nth-child(3) {
+    left: -50%;
     opacity: 0;
-    transition: all .25s;
 }
 
-.active input[type=checkbox]:checked~.menuIconToggle>.dia.p-1 {
-    box-sizing: border-box;
-    transform: rotate(135deg);
-    margin-top: 8px;
-    transition: all .25s;
+.active .nav-bar span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
 }
 
-.active input[type=checkbox]:checked~.menuIconToggle>.dia.p-2 {
-    box-sizing: border-box;
-    transform: rotate(-135deg);
-    margin-top: -12px;
-    transition: all .25s;
+.active .nav-bar span:nth-child(5),
+.active .nav-bar span:nth-child(6) {
+    top: 14px;
 }
 
-.openSideMenu {
-    display: none;
+.active .nav-bar span:nth-child(5),
+.active .nav-bar span:nth-child(6) {
+    top: 14px;
 }
 
 .custom_menu ul {
@@ -397,7 +421,12 @@ fieldset {
 }
 
 .hamburger-menu {
+    cursor: pointer;
     display: none;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    z-index: 1;
 }
 
 .footer-logo,
@@ -412,6 +441,15 @@ fieldset {
 .footer-logo a,
 .logo a {
     display: block;
+}
+
+.custom_menu li a:hover {
+    color: #008080;
+}
+
+.custom_menu .active {
+    text-decoration: underline;
+    color: #008080;
 }
 
 /* Responsive Menu */
@@ -430,14 +468,6 @@ fieldset {
     }
 
     .hamburger-menu {
-        display: block;
-        position: fixed;
-        top: 15px;
-        right: 20px;
-        z-index: 1;
-    }
-
-    .menuIconToggle {
         display: block;
     }
 

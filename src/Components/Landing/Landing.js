@@ -93,7 +93,7 @@ function Landing() {
                                 </article>
                             ))
                         ) : (
-                            <div>Loading...</div>
+                            <div>PLease wait...</div>
                         )}
                     </Carousel>
                 </div>
@@ -117,7 +117,7 @@ function Landing() {
                                 ))
 
                             ) : (
-                                <div>Loading...</div>
+                                <div>Please wait...</div>
                             )}
                         </div>
                         <div className="w-50">
