@@ -51,6 +51,13 @@ function Landing() {
         fetchHighlights();
     }, []);
 
+    const [activeIndex, setActiveIndex] = useState(null);
+    const [divActive, setDivActive] = useState('');
+    const toggleAccordion = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+        setDivActive((prevState) => !prevState)
+    };
+
     return (
         <div className='home'>
             <div id="banner" className="banner">
@@ -73,7 +80,7 @@ function Landing() {
                         containerClass="carousel-container">
                         {highlightData ? (
                             highlightData.map((item, index) => (
-                             
+
                                 <article key={index} className="highlight-block">
                                     <div className="bg-box">
                                         <div className="image-block">
@@ -106,16 +113,27 @@ function Landing() {
                                 Catergories
                             </h2>
                             {categoryData ? (
-                                categoryData.map((item, index) => (
-
-                                    <div key={index} className="category-block bg-white">
-                                        <p>{item.name}</p>
-                                        <div className="navigate">
-                                            <img src="images/arrow_forward.svg" alt="read more" className="img-fluid" />
+                                categoryData.map((section, index) => (
+                                    <div className="accordion-block" key={index}>
+                                        <div className="category-block bg-white bg-box" onClick={() => toggleAccordion(index)}>
+                                            {section.name}
+                                            <div className={divActive ? 'navigate active' : 'navigate'}>
+                                                <img src="images/arrow_forward.svg" alt="read more" className="img-fluid" />
+                                            </div>
                                         </div>
+                                        {activeIndex === index && (
+                                            <div className="accordion-content bg-box">
+                                                <ul>
+                                                {section.activities.map((item, index) => (
+                                                    <li key={index} className="activities">
+                                                        {item.title}
+                                                    </li>
+                                                ))}
+                                                </ul>
+                                            </div>
+                                        )}
                                     </div>
                                 ))
-
                             ) : (
                                 <div>Please wait...</div>
                             )}

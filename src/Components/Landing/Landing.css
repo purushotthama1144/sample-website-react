@@ -35,18 +35,29 @@
     opacity: 0.7;
 }
 
+.accordion-block {
+    margin-bottom: 10px;
+}
+
 .category-block {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    border-radius: 8px;
+    z-index: 1;
+    position: relative;
     cursor: pointer;
-    margin-bottom: 10px;
 }
 
 .category-block p {
     margin-bottom: 0;
+}
+
+.accordion-content {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: -10px;
+    border-radius: 8px;
 }
 
 .text-left-image-right-block {
@@ -105,6 +116,10 @@
 
 .react-multi-carousel-item {
     padding: 10px;
+}
+
+.accordion-content ul {
+    margin-left: 20px;
 }
 
 @media(max-width: 468px) {
