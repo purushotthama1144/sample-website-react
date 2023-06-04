@@ -1,0 +1,10 @@
+.detail_page_banner {
+    width: 100%;
+    min-height: 400px;
+  }
+  .detail_pag_content {
+    padding: 40px;
+  }
+  .activities {
+    list-style: disc;
+  }
