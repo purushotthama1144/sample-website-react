@@ -101,8 +101,12 @@
     transform: scale(1.2);
 }
 
-.navigate {
-    cursor: pointer;
+.category-block img{
+    transition: 0.2s ease-in;
+}
+
+.category-block:hover img {
+    transform: rotate(90deg);
 }
 
 .border-top-radius {

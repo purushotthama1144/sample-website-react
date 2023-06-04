@@ -451,13 +451,15 @@ fieldset {
     text-decoration: underline;
     color: #008080;
 }
-
 /* Responsive Menu */
 @media(max-width: 468px) {
     #header {
         padding-top: 0;
         background-color: #fff;
         height: 80px;
+        -webkit-box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.1);
     }
 
     .header {
