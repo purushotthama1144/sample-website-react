@@ -1,10 +1,26 @@
 .detail_page_banner {
-    width: 100%;
-    min-height: 400px;
-  }
+  width: 100%;
+  min-height: 400px;
+}
+
+.detail_pag_content {
+  padding: 40px;
+}
+
+.activities {
+  list-style: disc;
+  font-size: 14px;
+}
+
+.activities_list {
+  margin-left: 30px;
+}
+.detail_page .banner_taital {
+  font-size: 40px;
+}
+
+@media(max-width: 468px) {
   .detail_pag_content {
-    padding: 40px;
+    padding: 30px 20px;
   }
-  .activities {
-    list-style: disc;
-  }
+}

@@ -400,8 +400,18 @@ fieldset {
     display: none;
 }
 
+.footer-logo,
 .logo {
     width: 100px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.footer-logo a,
+.logo a {
+    display: block;
 }
 
 /* Responsive Menu */
@@ -426,9 +436,11 @@ fieldset {
         right: 20px;
         z-index: 1;
     }
+
     .menuIconToggle {
         display: block;
     }
+
     .menu_button_block {
         display: block;
         position: fixed;
@@ -455,6 +467,10 @@ fieldset {
         top: 0;
         left: 0;
         transform: translateX(100%);
+    }
+
+    .active .bg-layer {
+        transform: translateX(0);
     }
 
     .custom_menu ul {

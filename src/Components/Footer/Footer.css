@@ -6,13 +6,3 @@
 .bg-black {
     background-color: #000000;
 }
-
-.footer-logo,
-.logo {
-    width: 100px;
-}
-
-.footer-logo a,
-.logo a {
-    display: block;
-}

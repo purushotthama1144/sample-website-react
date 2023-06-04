@@ -33,11 +33,7 @@ function App() {
 				<header id="header">
 					<div className="container container-medium-width">
 						<div className="header bg-white">
-							<div className="logo">
-								<Link to="/">
-									<img src="images/aloha-header.svg" alt="Aloha" className="img-fluid" />
-								</Link>
-							</div>
+							<Link to="/" className="logo" style={{ backgroundImage: "url(images/aloha-header.svg)" }}></Link>
 							<div className="hamburger-menu">
 								<input type="checkbox" id="openSideMenu" className="openSideMenu" />
 								<label htmlFor="openSideMenu" className="menuIconToggle"  onClick={handleButtonClick}>
